@@ -492,6 +492,31 @@ if __name__ == "__main__":
 
 Results:
 
+Building: 4-Story RC Frame
+Material: Steel01 (b=0.02)
+Period: 0.410s
+
+✓ DS4 Strict Bounds: [3.0, 3.8]g
+
+Phase 1: Generating 100 training samples (OpenSees)...
+  30/100: PGA=0.81g, u_max=86.16mm, drift=0.62%
+  60/100: PGA=1.71g, u_max=251.15mm, drift=1.79%
+  90/100: PGA=2.67g, u_max=451.45mm, drift=3.22%
+
+Phase 2: Training surrogate model (100 samples)...
+  Early stopping at epoch 1333
+
+Phase 3: Monte Carlo simulation (5000 samples/PGA)...
+  PGA 5/15: 25000 samples
+  PGA 10/15: 50000 samples
+  PGA 15/15: 75000 samples
+
+Phase 4: Fitting fragility curves (strict bounds for DS4)...
+  Using STRICT bounds for DS4: [3.0, 3.8]g
+
+Phase 5: Creating plot with extended X-axis...
+✓ Plot saved: fragility_opensees_extended_axis.png (extended X-axis)
+
 1. BUILDING PROPERTIES
 ----------------------------------------------------------------------------------------------------
 Mass                           202472 kg
